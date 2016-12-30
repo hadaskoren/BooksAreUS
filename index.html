@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books Shop</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body onload="initPage()" class="container-fluid">
+<div class ="entirePage">
+    <h1>Books Are US</h1>
+    <div class="booksShopTableDiv ">
+    </div>
+    <nav class="navBar" aria-label="...">
+        
+        <button class="btn btn-primary plusBtn" onclick="toggleBooksAdding()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a book</button>
+        <ul class="pagination pagination-sm">
+            <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+    
+    
+    
+    <div class="newBookForm">
+        <div class="form form-group">
+            <label for="nameID">Name:</label>
+            <input id="nameID" class="form-control"></input>
+            </br>
+            </br>
+            <label for="priceID">Price:</label>
+            <input id="priceID" class="form-control"></input>
+            </br>
+            </br>
+            <label for="imageID">Image URL:</label>
+            <input id="imageID" class="form-control"></input>
+            </br>
+            </br>
+            <label for="descID">Description:</label>
+            <textarea id="descID" class="form-control" rows="2"></textarea>
+            </br>
+            </br>
+            <button class="btn btn-primary" onclick ="addBookToTable()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
+        </div>
+    </div>
+    
+    <div class ="descriptionWindow">
+        <div>
+            <span class="close" onclick ="closeDesc()">x</span>
+            <label id="descTitle"></label>
+        </div>
+        <div class ="imgAndDesc">
+            <img class="bookImg" src="" alt="">
+            <article class="bookDesc">
+            </article>
+            <div class = "rateThumbs">
+                <img src = "img/thumbsup.png" class="thumbsUp" onclick="rateClicked('up')"/>
+                <label class = "rateLabel"></label>
+                <img src = "img/thumbsdown.png" class="thumbsDown" onclick="rateClicked('down')"/>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/booksItems.js"></script>
+</body>
+
+</html>
